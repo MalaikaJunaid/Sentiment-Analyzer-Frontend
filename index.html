@@ -939,7 +939,7 @@
 
       //To create a new user
       function signup(username, password) {
-  fetch(`{url}/signup`, { // Replace with your API endpoint
+  fetch(`${url}/signup`, { // Replace with your API endpoint
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -959,7 +959,7 @@
 
 //To authenticate a user
 function login(username, password) {
-  fetch(`{url}/login`, { // Replace with your API endpoint
+  fetch(`${url}/login`, { // Replace with your API endpoint
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -979,7 +979,7 @@ function login(username, password) {
 
 //Analyze Sentiment
 function login(username, password) {
-  fetch(`{url}/login`, { // Replace with your API endpoint
+  fetch(`${url}/login`, { // Replace with your API endpoint
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -999,7 +999,7 @@ function login(username, password) {
 
 //Detect Emotion in Text
 function detectEmotion(text) {
-  fetch(`{url}/detect-emotion`, { // Replace with your API endpoint
+  fetch(`${url}/detect-emotion`, { // Replace with your API endpoint
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -1019,7 +1019,7 @@ function detectEmotion(text) {
 
 //Detect Language of Text
 function detectLanguage(text) {
-  fetch(`{url}/detect-language`, { // Replace with your API endpoint
+  fetch(`${url}/detect-language`, { // Replace with your API endpoint
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -1039,7 +1039,7 @@ function detectLanguage(text) {
 
 //Retrieve User's Analysis History
 function getUserHistory(token) {
-  fetch(`{url}/user/history`, { // Replace with your API endpoint
+  fetch(`${url}/user/history`, { // Replace with your API endpoint
     method: 'GET',
     headers: {
       'Authorization': `Bearer ${token}`, // Include the token in the Authorization header
