@@ -227,14 +227,14 @@
         </p>
         <div class="input-group input-group-outline p-1">
           <label class="form-label"></label>
-          <textarea
+          <textarea id="text-input"
             type="text"
             class="form-control"
             placeholder="Type here..."
           ></textarea>
         </div>
       
-        <button
+        <button id="analyze-text"
           class="btn bg-gradient-primary w-100"
           type="submit"
           >Analyze Text!</a
@@ -934,6 +934,128 @@
         };
         Scrollbar.init(document.querySelector("#sidenav-scrollbar"), options);
       }
+
+      let url = "https://text-sentiment-analyzer.onrender.com"
+
+      //To create a new user
+      function signup(username, password) {
+  fetch(`{url}/signup`, { // Replace with your API endpoint
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ username, password }),
+  })
+  .then(response => response.json())
+  .then(data => {
+    console.log('Signup successful:', data);
+    // Handle success, e.g., show a message or redirect
+  })
+  .catch(error => {
+    console.error('Signup error:', error);
+    // Handle error, e.g., show an error message
+  });
+}
+
+//To authenticate a user
+function login(username, password) {
+  fetch(`{url}/login`, { // Replace with your API endpoint
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ username, password }),
+  })
+  .then(response => response.json())
+  .then(data => {
+    console.log('Login successful:', data);
+    // Handle success, e.g., store token or redirect
+  })
+  .catch(error => {
+    console.error('Login error:', error);
+    // Handle error, e.g., show an error message
+  });
+}
+
+//Analyze Sentiment
+function login(username, password) {
+  fetch('https://your-backend-api-url.com/login', { // Replace with your API endpoint
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ username, password }),
+  })
+  .then(response => response.json())
+  .then(data => {
+    console.log('Login successful:', data);
+    // Handle success, e.g., store token or redirect
+  })
+  .catch(error => {
+    console.error('Login error:', error);
+    // Handle error, e.g., show an error message
+  });
+}
+
+//Detect Emotion in Text
+function detectEmotion(text) {
+  fetch('https://your-backend-api-url.com/detect-emotion', { // Replace with your API endpoint
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ text }),
+  })
+  .then(response => response.json())
+  .then(data => {
+    console.log('Emotion detection result:', data);
+    // Handle success, e.g., display detected emotion
+  })
+  .catch(error => {
+    console.error('Emotion detection error:', error);
+    // Handle error, e.g., show an error message
+  });
+}
+
+//Detect Language of Text
+function detectLanguage(text) {
+  fetch('https://your-backend-api-url.com/detect-language', { // Replace with your API endpoint
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ text }),
+  })
+  .then(response => response.json())
+  .then(data => {
+    console.log('Language detection result:', data);
+    // Handle success, e.g., display detected language
+  })
+  .catch(error => {
+    console.error('Language detection error:', error);
+    // Handle error, e.g., show an error message
+  });
+}
+
+//Retrieve User's Analysis History
+function getUserHistory(token) {
+  fetch(`{url}/user/history`, { // Replace with your API endpoint
+    method: 'GET',
+    headers: {
+      'Authorization': `Bearer ${token}`, // Include the token in the Authorization header
+    },
+  })
+  .then(response => response.json())
+  .then(data => {
+    console.log('User history:', data);
+    // Handle success, e.g., display user history
+  })
+  .catch(error => {
+    console.error('Error fetching user history:', error);
+    // Handle error, e.g., show an error message
+  });
+}
+
     </script>
 
     <!-- Github buttons -->
