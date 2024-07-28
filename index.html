@@ -979,7 +979,7 @@ function login(username, password) {
 
 //Analyze Sentiment
 function login(username, password) {
-  fetch('https://your-backend-api-url.com/login', { // Replace with your API endpoint
+  fetch(`{url}/login`, { // Replace with your API endpoint
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -999,7 +999,7 @@ function login(username, password) {
 
 //Detect Emotion in Text
 function detectEmotion(text) {
-  fetch('https://your-backend-api-url.com/detect-emotion', { // Replace with your API endpoint
+  fetch(`{url}/detect-emotion`, { // Replace with your API endpoint
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -1019,7 +1019,7 @@ function detectEmotion(text) {
 
 //Detect Language of Text
 function detectLanguage(text) {
-  fetch('https://your-backend-api-url.com/detect-language', { // Replace with your API endpoint
+  fetch(`{url}/detect-language`, { // Replace with your API endpoint
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
